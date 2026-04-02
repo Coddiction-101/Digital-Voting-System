@@ -12,28 +12,54 @@
 
 <body>
     <div class="container">
-        <!-- login box -->
         <div class="input-box">
-            <!-- login header -->
             <div class="input-header">
                 <i class="fas fa-vote-yea"></i>
                 <h1>Digital Voting System</h1>
                 <p>Secure ~ Transparent ~ Democratic</p>
             </div>
             <form action="php/login.php" id="loginForm" method="post">
+
                 <h2>Login to Vote</h2>
+                <!-- Email/Voter ID Input -->
                 <div class="input-group">
                     <i class="fas fa-user"></i>
-                    <input type="text" name="email" id="email" placeholder="Email or Voter ID " required>
+                    <input type="text" name="email" id="email" placeholder="Email or Voter ID" required>
                 </div>
-                <div class="input-group">
+                <!-- Password Input -->
+                <div class="login-group">
                     <i class="fas fa-lock"></i>
                     <input type="password" id="password" name="password" placeholder="Password" required>
-                    <i class="fas fa-eye toggle-password" id="togglePassword"></i>
+                    <i class="fas fa-eye toggle-password" id="togglePassowrd"></i>
                 </div>
+                <!-- Remember me -->
+                <div class="options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="remember" name="remember">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="forgot_password.html" class="forgot-password">Forgot password</a>
+                </div>
+                <!-- Erro msg -->
+                <div class="error-message" id="errorMessage" style="display: none;">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span id="errorText"></span>
+                </div>
+
+                <!-- Login Button -->
+                 <button type="submit" class="login-btn">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Login
+                 </button>
+
+                 <div class="register-link">
+                    <a href="register.html">Register now</a>
+                 </div>
+
             </form>
         </div>
     </div>
+    <script src="js/login.js"></script>
 </body>
 
 </html>
