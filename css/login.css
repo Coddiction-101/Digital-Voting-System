@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter';
     background: var(--background-color);
     min-height: 100vh;
     display: flex;
@@ -31,7 +31,6 @@ body {
     animation: slideUp 0.5s ease;
 }
 
-
 @keyframes slideUp {
     from {
         opacity: 0;
@@ -44,10 +43,9 @@ body {
     }
 }
 
-
 .login-header {
     background: #3A4B41;
-    color: #FeFBF6;
+    color: #FEFBF6;
     padding: 40px 30px;
     text-align: center;
 }
@@ -63,6 +61,145 @@ body {
 }
 
 .login-header p {
+    font-family: 'Montserrat';
     font-size: 14px;
     opacity: 0.9;
 }
+
+form {
+    padding: 40px 30px;
+}
+
+form h2 {
+    font-size: 24px;
+    font-family: 'Inter';
+    text-align: center;
+    color: #3A4B41;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #3A4B41;
+    font-size: 18px;
+}
+
+.input-group i:first-child {
+    left: 15px;
+}
+
+.input-group input {
+    padding: 15px 45px 15px 45px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 45px 15px 45px;
+    border: 2px solid #3A4B41;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    color: #999;
+}
+
+.toggle-password:hover {
+    color: #667eea;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.remember-me input {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.forgot-password {
+    color: #3A4B41;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.forgot-password:hover {
+    color: rgb(170, 7, 7);
+    text-decoration: underline;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background: #FEFBF6;
+    color: #3A4B41;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: 'inter';
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px #3A4B41;
+}
+
+.login-btn:active {
+    transform: translateY(0);
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 25px;
+    color: #666;
+    font-size: 14px;
+}
+
+.register-link a {
+    color: #3A4B41;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.register-link a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+/* I have to work on - Error Message Section */
