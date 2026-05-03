@@ -1,3 +1,15 @@
+:root {
+    --primary-color: #4A90E2;
+    --hover-color: #357ABD;
+    --background-color: #c9cfe4;
+    --body-background: #E1D2C1;
+    --text-color: #333;
+    --status-live: #ef4444;
+    --status-upcoming: #f59e0b;
+    --card-shadow: rgba(0, 0, 0, 0.05);
+    --card-hover-shadow: rgba(0, 0, 0, 0.1);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,7 +18,7 @@
 
 body {
     font-family: 'Inter', 'Montserrat', sans-serif;
-    background-color: #f4f6f8;
+    background-color: var(--body-background);
     color: #333;
     line-height: 1.6;
 }
@@ -17,7 +29,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(204, 120, 120, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,7 +75,7 @@ body {
     align-items: center;
     font-size: 1.8rem;
     font-weight: 600;
-    color: #4A90E2;
+    color: var(--primary-color);
 }
 
 .logo i {
@@ -76,7 +88,7 @@ body {
 }
 
 .avatar {
-    background-color: #4A90E2;
+    background-color: #393a3b;
     color: #fff;
     font-weight: 700;
     width: 50px;
@@ -102,25 +114,25 @@ body {
 }
 
 .card {
-    background: #fff;
+    background: var(--background-color);
     flex: 1 1 200px;
     padding: 1.5rem;
     border-radius: 10px;
     display: flex;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 8px var(--card-shadow);
     transition: box-shadow 0.3s, transform 0.3s;
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px var(--card-hover-shadow);
     transform: translateY(-3px);
 }
 
 .icon {
     font-size: 2rem;
     margin-right: 1rem;
-    color: #4A90E2;
+    color: #393a3b;
 }
 
 .content h3 {
@@ -151,7 +163,7 @@ section {
     background: #fff;
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 8px var(--card-shadow);
 }
 
 .section-header {
@@ -171,13 +183,13 @@ section {
 
 .section-header a {
     font-size: 0.9rem;
-    color: #4A90E2;
+    color: var(--primary-color);
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .section-header a:hover {
-    color: #357ABD;
+    color: var(--hover-color);
 }
 
 .cards-grid {
@@ -233,16 +245,16 @@ section {
     padding: 0.3rem 0.6rem;
     border-radius: 20px;
     font-size: 0.75rem;
-    color: #fff;
     font-weight: 600;
+    color: #fff;
 }
 
-.live {
-    background-color: #ef4444;
+.status.live {
+    background-color: var(--status-live);
 }
 
-.upcoming {
-    background-color: #f59e0b;
+.status.upcoming {
+    background-color: var(--status-upcoming);
 }
 
 .btn {
@@ -260,12 +272,12 @@ section {
 }
 
 .btn.primary {
-    background-color: #4A90E2;
+    background-color: var(--primary-color);
     color: #fff;
 }
 
 .btn.primary:hover {
-    background-color: #357ABD;
+    background-color: var(--hover-color);
 }
 
 .btn.disabled {
@@ -286,20 +298,20 @@ section {
     padding: 1rem;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 8px var(--card-shadow);
     transition: box-shadow 0.3s, transform 0.3s;
     cursor: pointer;
 }
 
 .action-card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px var(--card-hover-shadow);
     transform: translateY(-3px);
 }
 
 .action-card i {
     font-size: 2rem;
     margin-bottom: 0.5rem;
-    color: #4A90E2;
+    color: var(--primary-color);
 }
 
 .action-card h4 {
