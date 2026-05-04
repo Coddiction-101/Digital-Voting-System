@@ -24,10 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Basic validation on form submit
     form.addEventListener('submit', (e) => {
-        e.preventDefault();
-
         hideError();
 
         const nameVal = document.getElementById('name').value.trim();
@@ -36,26 +33,27 @@ document.addEventListener('DOMContentLoaded', () => {
         const confirmPassVal = confirmPassword.value.trim();
 
         if (nameVal.length < 3) {
+            e.preventDefault();
             showError('Name must be at least 3 characters');
             return;
         }
 
         if (emailVal === '') {
+            e.preventDefault();
             showError('Email or Voter ID is required');
             return;
         }
 
         if (passVal.length < 6) {
+            e.preventDefault();
             showError('Password must be at least 6 characters');
             return;
         }
 
         if (passVal !== confirmPassVal) {
+            e.preventDefault();
             showError('Passwords do not match');
-            return;
         }
-
-        showSuccess();
     });
 
     function showError(msg) {
@@ -69,26 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
         errorText.textContent = '';
     }
 
-    function showSuccess() {
-        const successDiv = document.createElement('div');
-        successDiv.style.cssText = `
-            background: #d4edda;
-            border-left: 4px solid #28a745;
-            padding: 12px 15px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            color: #155724;
-            font-family: 'Inter', sans-serif;
-            font-size: 14px;
-        `;
-        successDiv.innerHTML = '<i class="fas fa-check-circle" style="margin-right: 10px;"></i><span>Registration successful! Redirecting...</span>';
-
-        form.insertBefore(successDiv, form.firstChild);
-
-        setTimeout(() => {
-            alert('In real application, redirect to login page.');
-        }, 1500);
+    const params = new URLSearchParams(window.location.search);
+    const message = params.get('message');
+    if (message) {
+        showError(message);
     }
 });
