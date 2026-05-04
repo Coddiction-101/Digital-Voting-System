@@ -1,1 +1,102 @@
+.admin-shell .header {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--card-shadow);
+    padding: 1.25rem;
+}
+
+.admin-shell .logo {
+    color: var(--text-color);
+}
+
+.admin-shell section {
+    border: 1px solid var(--border-color);
+}
+
+.admin-shell form {
+    margin: 0;
+}
+
+.admin-shell .row-actions form {
+    align-items: center;
+    display: flex;
+    gap: 0.6rem;
+}
+
+.admin-shell .row-actions select {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-color);
+    font: inherit;
+    padding: 0.7rem;
+}
+
+.admin-stat {
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.admin-stat small {
+    color: var(--text-color);
+    opacity: 0.72;
+}
+
+.admin-card-title {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.admin-card-title h3 {
+    padding-right: 5rem;
+}
+
+.admin-empty {
+    border: 1px dashed var(--border-color);
+    border-radius: 10px;
+    color: var(--text-color);
+    opacity: 0.76;
+    padding: 1rem;
+}
+
+.log-item,
+.vote-item {
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.8rem 0;
+}
+
+.log-item:last-child,
+.vote-item:last-child {
+    border-bottom: 0;
+}
+
+.admin-actions .action-card {
+    color: var(--text-color);
+    min-height: 118px;
+}
+
+.admin-actions .action-card:hover {
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .admin-card-title {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .admin-card-title h3 {
+        padding-right: 0;
+    }
+
+    .admin-shell .row-actions,
+    .admin-shell .row-actions form {
+        align-items: stretch;
+        flex-direction: column;
+        width: 100%;
+    }
+}
 
