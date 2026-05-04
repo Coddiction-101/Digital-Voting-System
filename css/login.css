@@ -201,4 +201,24 @@ form h2 {
     color: #764ba2;
     text-decoration: underline;
 }
- 
+
+.logout-section {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logout-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.logout-link:hover {
+    background-color: #0056b3;
+}
