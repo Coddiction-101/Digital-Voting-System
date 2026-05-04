@@ -7,7 +7,7 @@
 }
 
 :root {
-    --background-color: #E1D2C1; /* same as login background */
+    --background-color: #E1D2C1; 
     --box-background: #F0E5DC; /* lighter for register box */
     --header-background: #4A5A3A; /* slightly different for header */
     --text-color: #3A4B41;
