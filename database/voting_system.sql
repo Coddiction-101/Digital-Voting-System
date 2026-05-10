@@ -1,9 +1,3 @@
-CREATE DATABASE IF NOT EXISTS voting_system
-    CHARACTER SET utf8mb4
-    COLLATE utf8mb4_unicode_ci;
-
-USE voting_system;
-
 DROP TABLE IF EXISTS admin_logs;
 DROP TABLE IF EXISTS votes;
 DROP TABLE IF EXISTS candidates;
