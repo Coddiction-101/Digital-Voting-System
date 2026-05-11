@@ -1,6 +1,22 @@
 # Digital Voting System
 
+## Live Demo
+
+Website:  
+https://digitalvotingsystem.wuaze.com
+
+Tested Features:
+- Voter registration
+- Login/logout
+- Voting system
+- Election results
+- Admin dashboard
+- Theme toggle
+- Session-based authentication
+
 A secure and user-friendly web-based Digital Voting System developed as a BCA final year project. The system allows registered voters to log in, view active elections, cast a vote once per election, and view election results. Admin users can manage elections, candidates, voters, analytics, and basic system settings.
+
+---
 
 ## Project Overview
 
@@ -14,28 +30,29 @@ This project is built as a simple MVP using only core web technologies. It focus
 - Result display with vote percentages
 - Admin management for elections and candidates
 
+---
+
 ## Tech Stack
 
-Frontend:
-
+### Frontend
 - HTML5
 - CSS3
 - JavaScript
 
-Backend:
-
+### Backend
 - PHP
 
-Database:
-
+### Database
 - MySQL
 
-Tools:
-
+### Tools
 - XAMPP / WAMP
 - VS Code
 - phpMyAdmin
 - Git & GitHub
+- InfinityFree (Deployment Hosting)
+
+---
 
 ## Main Features
 
@@ -50,6 +67,8 @@ Tools:
 - Results page with vote counts and percentage bars
 - Admin activity logs
 - Light/dark theme toggle
+
+---
 
 ## Folder Structure
 
@@ -124,21 +143,25 @@ digital-voting-system/
     └── API_docs.md
 ```
 
+---
+
 ## Database Tables
 
 The database name is `voting_system`.
 
 Main tables:
 
-- `users` - Stores voter and admin accounts.
-- `elections` - Stores election details.
-- `candidates` - Stores candidates for each election.
-- `votes` - Stores vote records and prevents duplicate voting.
-- `admin_logs` - Stores important admin actions.
+- `users` — Stores voter and admin accounts
+- `elections` — Stores election details
+- `candidates` — Stores candidates for each election
+- `votes` — Stores vote records and prevents duplicate voting
+- `admin_logs` — Stores important admin actions
+
+---
 
 ## Setup Instructions
 
-1. Install XAMPP or WAMP.
+1. Install XAMPP or WAMP
 
 2. Place the project folder inside:
 
@@ -146,7 +169,7 @@ Main tables:
 C:/xampp/htdocs/digital-voting-system
 ```
 
-3. Start Apache and MySQL from XAMPP Control Panel.
+3. Start Apache and MySQL from XAMPP Control Panel
 
 4. Open phpMyAdmin:
 
@@ -178,21 +201,25 @@ If your Apache runs on port 80, use:
 http://localhost/digital-voting-system/login.html
 ```
 
+---
+
 ## Demo Login
 
-Admin:
+### Admin
 
 ```text
 Email: admin@example.com
 Password: admin123
 ```
 
-Voter:
+### Voter
 
 ```text
 Email: voter@example.com
 Password: voter123
 ```
+
+---
 
 ## Core Modules
 
@@ -204,8 +231,8 @@ New voters can register with their name, email, and password. Passwords are stor
 
 Users can log in using email or voter ID. The system redirects users based on role:
 
-- Voter -> voter dashboard
-- Admin -> admin dashboard
+- Voter → voter dashboard
+- Admin → admin dashboard
 
 ### Voting Panel
 
@@ -226,6 +253,8 @@ Admins can:
 
 The result page shows candidates, vote counts, percentages, and simple result bars.
 
+---
+
 ## Security Features
 
 - Password hashing with PHP `password_hash`
@@ -236,11 +265,13 @@ The result page shows candidates, vote counts, percentages, and simple result ba
 - Duplicate vote prevention
 - Escaped output using `htmlspecialchars`
 
+---
+
 ## Development Status
 
-MVP completed.
+MVP completed and successfully deployed online.
 
-Working modules:
+### Working Modules
 
 - Registration
 - Login/logout
@@ -252,6 +283,9 @@ Working modules:
 - Candidate management
 - Voter list
 - Analytics/settings pages
+- Live deployment on InfinityFree
+
+---
 
 ## Future Enhancements
 
@@ -263,6 +297,8 @@ Working modules:
 - More detailed analytics
 - Mobile UI improvements
 
+---
+
 ## Learning Outcomes
 
 - Full-stack web development with PHP and MySQL
@@ -272,4 +308,3 @@ Working modules:
 - CRUD operations
 - Form validation and security basics
 - Project structuring for GitHub submission
-
